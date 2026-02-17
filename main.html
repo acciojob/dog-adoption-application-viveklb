@@ -5,75 +5,27 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
-<style>
-	body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
 
-form {
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Text inputs */
-#name,
-#phone,
-#address,
-#multiSelect {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-/* Checkbox */
-#dogHistory {
-  margin-right: 6px;
-}
-
-/* Submit button */
-#submit {
-  width: 100%;
-  padding: 10px;
-  background: #4a6cf7;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-#submit:hover {
-  background: #3b5de0;
-}
-
-</style>
 <body>
-	<form action="/submit" method="POST">
-		<input type="text" placeholder="Name" id="name">
-		<input type="text" placeholder="Phone Number" id="phone">
-		<input type="text" placeholder="Address" id="address">
-		<input type="checkbox" id="dogHistory" name="lived_with_dog" value="yes">
-        <label for="dogHistory">Have you ever lived with a Dog before?</label>
-        <select type="select" id="multiSelect">
-			<option>item1</option>
-			<option>item2</option>
-			<option>item3</option>
-		</select>
-		<input type="submit" id="submit" value="submit">
+	<form>
+		<label>Name</label>
+		<input id="name" type="text" placeholder="Name"><br>
+		<label>Phone Number</label>
+		<input id="phone" type="text" placeholder="Phone Number"><br>
+		<label>Address</label>
+		<input id="address" type="text" placeholder="Address"><br>
+	    <label>Have you ever lived with a Dog before?</label>
+		<input type="checkbox" id="checkbox"><br>
+		<label>Please select your preferred breeds</label><br>
+		<select id="multiSelect" multiple size="3">
+           <option>Golden Retriever</option>
+           <option>Labrador Retriever</option>
+           <option>German Shepherd</option>    
+       </select>
+		<label>submit</label>
+	   <input id="submit" type="submit" value="Submit">
 	</form>
-	<!-- the entire body must be written by student -->
+	
     <script type="text/javascript" src="./script.js">
 </script>
 
